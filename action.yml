@@ -30,8 +30,7 @@ runs:
   using: 'docker'
   image: 'docker://garethr/kubeval:latest'
   args:
-  - -d
-  - ${{ inputs.files }} 
+  - -d */*.yaml
   - -o
   - ${{ inputs.output }}
   - --strict=${{ inputs.strict }}
